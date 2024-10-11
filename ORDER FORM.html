@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ORDER NOW</title>
+
+	<style>
+        body {
+            background-image: url(BACKGROUND3.jpg); /* Background image */
+      	    background-size: cover; /* Cover the entire viewport */
+      	    font-family: Arial, sans-serif; /* Optional: Choose a suitable font */
+      	    margin: 0;
+      	    padding: 0;
+     	    display: flex;
+      	    justify-content: center;
+      	    align-items: center;
+     	    height: 100vh;
+        }
+		.order-container {
+      	    background-color: rgba(255, 255, 255, 0.8); /* Light gray background with opacity */
+     	    border-radius: 20px; /* Rounded corners */
+      	    padding: 20px;
+     	    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); /* Drop shadow */
+     	    text-align: center;
+		}
+        .navbar {
+            background-color: #00b4d8;      /* Blue background */
+            padding: 10px 20px;            /* Padding for the navbar */
+            display: flex;                  /* Use flexbox for layout */
+            align-items: center;            /* Center items vertically */
+            justify-content: space-between; /* Space between logo/name and links */
+	        position: fixed;		    /* Fixed position for the navbar */
+	        top: 0;			    /* Stick to the top */
+	        width: 90%;		    		/* Navbar width */
+	        margin: 0 auto;		    /* Center the navbar */
+	        z-index: 1000;		    /* Ensure it appears above other content */
+	        left: 0;			    /* Ensure it's centered */
+	        right: 0;			    /* Ensure it's centered */
+	        border-bottom-left-radius: 15px;/* Rounds bottom left corner */
+	        border-bottom-right-radius: 15px;/* Rounds bottom right corner */
+	        left: 0;
+	        right: 0;
+        }
+        .navbar img {
+            height: 50px;                  /* Set logo height */
+        }
+        .navbar a,
+		.navbar b {
+            text-decoration: none;          /* Remove underline from links */
+            color: #333;                   /* Dark gray text color */
+            padding: 10px 15px;            /* Padding for links */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+        .navbar a:hover {
+            background-color: #90e0ef;        /* Light blue background on hover */
+            border-radius: 5px;            /* Rounded corners for hover effect */
+        }
+        .logo-name {
+            font-size: 30px;                /* Logo name font size */
+            font-weight: bold;               /* Bold font */
+        }
+
+        /* Email input styling */
+        .email-input {
+            margin: 20px 0; /* Margin above and below the input */
+        }
+
+        .email-input input {
+            padding: 10px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px;     /* Rounded corners */
+            width: 250px;            /* Width of the input field */
+            font-size: 16px;         /* Font size */
+        }
+    </style>
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="ENNEJI COOKIES">
+				<img src="MENU LOGO.png" alt="ENNEJI COOKIES">
+		</div>
+		
+		<div>
+			<b>ENNEJI COOKIES</b>
+			<a href="HOME PAGE.html"><b>Home</b></a>
+			<a href="MENU.html"><b>Cookie Menu</b></a>
+		</div>
+	</div>
+
+	<div class="order-container">
+        <div class="order-form" id="order-form">
+            <select id="cookie-type" onchange="updatePrice()">
+		<option value="Choose">Choose</option>
+                <option value="Cappuccino">Cappuccino</option>
+                <option value="Ginger">Ginger</option>
+                <option value="Lemon Crinkle">Lemon Crinkle</option>
+                <option value="Oreo">Oreo</option>
+		<option value="Peanut Butter & Jelly">Peanut Butter & Jelly</option>
+		<option value="Triple Chocolate">Triple Chocolate</option>
+            </select><br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1" onchange="updatePrice()"><br>
+            <!-- Removed delivery date input as per request -->
+            <!-- Banking details form -->
+            <form id="bank-details-form">
+                <input type="text" id="name" placeholder="Name" required><br>
+                <input type="text" id="card-number" placeholder="Card Number" required><br>
+                <input type="text" id="expiry" placeholder="Expiry Date (MM/YYYY)" required><br>
+                <input type="text" id="cvv" placeholder="CVV" required><br>
+            </form>
+            <!-- End of Banking details form -->
+            <div id="price"></div>
+
+            <!-- Email Input Field -->
+            <div class="email-input">
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <button class="order-button" onclick="submitOrder()">Order</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedCookie = "";
+        let totalPrice = 0;
+
+        function updatePrice() {
+            const quantity = parseInt(document.getElementById("quantity").value);
+            selectedCookie = document.getElementById("cookie-type").value;
+            totalPrice = getPrice(selectedCookie) * quantity;
+            const priceElement = document.getElementById("price");
+            priceElement.textContent = `Total Price: R${totalPrice.toFixed(2)}`;
+        }
+
+        function getPrice(cookieType) {
+            switch(cookieType) {
+		case "Choose":
+		    return 0;
+                case "Cappuccino":
+                    return 12.50;
+                case "Ginger":
+                    return 13.00;
+                case "Lemon Crinkle":
+                    return 13.50;
+                case "Oreo":
+                    return 15.20;
+		case "Peanut Butter & Jelly":
+		    return 14.30;
+		case "Triple Chocolate":
+		    return 16.50;
+                default:
+                    return 0;
+            }
+        }
+
+        function submitOrder() {
+            const quantity = parseInt(document.getElementById("quantity").value);
+            const name = document.getElementById("name").value;
+            const cardNumber = document.getElementById("card-number").value;
+            const expiry = document.getElementById("expiry").value;
+            const cvv = document.getElementById("cvv").value;
+            const email = document.querySelector('.email-input input').value; // Get email value
+
+            // Check if all fields are filled
+            if (name === "" || cardNumber === "" || expiry === "" || cvv === "" || email === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // You can perform further validation here
+
+            // Once validated, proceed to the next page
+            window.location.href = "CONFIRMATION PAGE.html";
+        }
+    </script>
+</body>
+
+</html>

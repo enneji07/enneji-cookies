@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ENNEJI COOKIES</title>
+
+	<style>
+        body {
+            font-family: Arial, sans-serif; /* Set a default font */
+            margin: 0;                     /* Remove default margin */
+	    padding-top: 60px;		   /*Padding to push the content below navbar */
+	    background-image: url(BACKGROUND.jpg);
+	    background-size: cover;	   /* Ensures image covers the entire page*/
+	    background-position: center;   /* Center the image */
+	    background-repeat: no-repeat;  /* Prevent image from repeating */
+        }
+        .navbar {
+            background-color: #00b4d8;      /* Blue background */
+            padding: 10px 20px;             /* Padding for the navbar */
+            display: flex;                  /* Use flexbox for layout */
+            align-items: center;            /* Center items vertically */
+            justify-content: space-between; /* Space between logo/name and links */
+	    position: fixed;		    /* Fixed position for the navbar */
+	    top: 0;			    /* Stick to the top */
+	    width: 90%;		    	    /* Nav Bar width */
+	    margin: 0 auto;		    /* Center the navbar */
+	    z-index: 1000;		    /* Ensure it appears above other content */
+	    left: 0;			    /* Ensure it's centered */
+	    right: 0;			    /* Ensure it's centered */
+	    border-bottom-left-radius: 15px;/* Rounds bottom left corner */
+	    border-bottom-right-radius: 15px;/* Rounds bottom right corner */
+        }
+        .navbar img {
+            height: 50px;                  /* Set logo height */
+        }
+        .navbar a {
+            text-decoration: none;          /* Remove underline from links */
+            color: #333;                   /* Dark gray text color */
+            padding: 10px 25px;            /* Padding for links */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+        .navbar a:hover {
+            background-color: #90e0ef;        /* Light blue background on hover */
+            border-radius: 5px;            /* Rounded corners for hover effect */
+	}
+        .logo-name {
+            font-size: 30px;                /* Logo name font size */
+            font-weight: bold;               /* Bold font */
+        }
+	.rounded-box {
+      border-radius: 20px; /* Rounded corners */
+      background-color: rgba(173, 216, 230, 0.8); /* Light blue with increased opacity */
+      padding: 10px;
+      margin: 10px; /* Added margin */
+      display: inline-block; /* Display as inline-block */
+	}
+	.rounded-box h1,
+	.rounded-box p {
+      	     color: #000000; /* Black text */
+	}
+	.view-all-cookies {
+	     text-decoration: none;		/* Remove Underline */
+	     color: #000000;			/* Dark grey text colour */
+	     padding: 10px 15px;		/* Padding for the link */
+	     transition: background-color 0.3s;	/* Transition for hover effect */
+	}
+	.view-all-cookies:hover {
+	     background-color: #90e0ef;		/* Light blue background on hover */
+	     border-radius: 5px;		/* Rounded corners for hover effect */
+	     padding: 10px 15px;		/* Ensure padding is maintained */
+	}
+    </style>
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="ENNEJI COOKIES">
+				<b>ENNEJI COOKIES</b>
+		</div>
+		
+		<div>
+			<a href="MENU.html"><b>Cookie Menu</b></a>
+			<a href="ORDER FORM.html"><b>Order Here</b></a>
+		</div>
+	</div>
+
+	<center><div class="rounded-box logo"><img src="LOGO.png" alt="ENNEJI COOKIES" width="550" height="300"></div></center>
+
+	<section class="rounded-box">
+			<h1>Introducing enneji Cookies, where every bite tells a story!</h1>
+
+			<p>
+	    		   We pride ourselves on crafting cookies that not only tantalize the taste buds but also spark the imagination. From classic flavors to innovative combinations, our cookies are meticulously baked to perfection and hand-decorated with care. Whether you're craving a traditional chocolate chip or a daring matcha green tea, we have something to satisfy every sweet tooth.
+			</p>
+
+			<center><a href="MENU.html" class="view-all-cookies"><b>View all Cookies</b></a></center>
+	</section>
+</body>
+
+</html>

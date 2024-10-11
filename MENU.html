@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COOKIE MENU</title>
+
+	<style>
+        body {
+            font-family: Arial, sans-serif; /* Set a default font */
+            margin: 0;                     /* Remove default margin */
+	    padding-top: 50px;		   /*Padding to push the content below navbar */
+	    background-image: url(BACKGROUND2.jpg);
+	    background-size: cover;	   /* Ensures image covers the entire page*/
+	    background-position: center;   /* Center the image */
+	    background-repeat: no-repeat;  /* Prevent image from repeating */
+        }
+        .navbar {
+            background-color: #00b4d8;      /* Blue background */
+            padding: 10px 20px;            /* Padding for the navbar */
+            display: flex;                  /* Use flexbox for layout */
+            align-items: center;            /* Center items vertically */
+            justify-content: space-between; /* Space between logo/name and links */
+	    position: fixed;		    /* Fixed position for the navbar */
+	    top: 0;			    /* Stick to the top */
+	    width: 90%;		    		/* Navbar width */
+	    margin: 0 auto;		    /* Center the navbar */
+	    z-index: 1000;		    /* Ensure it appears above other content */
+	    left: 0;			    /* Ensure it's centered */
+	    right: 0;			    /* Ensure it's centered */
+	    border-bottom-left-radius: 15px;/* Rounds bottom left corner */
+	    border-bottom-right-radius: 15px;/* Rounds bottom right corner */
+	    left: 0;
+	    right: 0;
+        }
+        .navbar img {
+            height: 50px;                  /* Set logo height */
+        }
+        .navbar a,
+	.navbar b {
+            text-decoration: none;          /* Remove underline from links */
+            color: #333;                   /* Dark gray text color */
+            padding: 10px 15px;            /* Padding for links */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+        .navbar a:hover {
+            background-color: #90e0ef;        /* Light blue background on hover */
+            border-radius: 5px;            /* Rounded corners for hover effect */
+        }
+        .logo-name {
+            font-size: 30px;                /* Logo name font size */
+            font-weight: bold;               /* Bold font */
+        }
+	.cookie-name {
+      	    border-radius: 20px; /* Rounded corners */
+      	    background-color: rgba(173, 216, 230, 0.8); /* Light blue with increased opacity */
+      	    padding: 10px;
+     	    margin: 5px; /* Added margin */
+      	    display: inline-block; /* Display as inline-block */
+	}
+	.cookie-name h3{
+      	     color: #000000; /* Black text */
+	}
+	.content {
+	    max-width: 1200px;
+	    margin: 20px auto;
+	    padding: 20px;
+	    text-align: center
+	}
+	.cookie-grid {
+	    display: grid;
+	    grid-template-columns: repeat(2, 1fr); /* 3 coulmns layoout */
+	    gap: 20px;				/* Space between images */
+	    text-align: center;
+	    justify-items: center;
+	}
+	.cookie-grid img {
+	    width: 50%;			/* Full width within */
+	    height: auto;			/* Maintain aspect ratio */
+	    border-radius: 10px;		/* Slight rounding for the images*/
+	}
+	h3 {
+	    font-size: 20px;
+	    color: #333;
+	}
+	.content a {
+	    text-decoration: none;
+	    padding: 10px 20px;
+	    background-color: #00b4d8;
+	    color: white;
+	    font-weight: bold;
+	    border-radius: 5px;
+	    transition: background-color 0.3s;
+	}
+	.content a:hover {
+	    background-color: #0077b6;
+	}
+	.content a {
+	    text-decoration: none;
+	    padding: 10px 20px;
+	    background-color: #00b4d8;
+	    color: white;
+	    font-weight: bold;
+	    border-radius: 10px;
+	    transition: background-color 0.3s;
+	    margin-top: 20px;
+	    display: inline-block;
+	}
+    </style>
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="ENNEJI COOKIES">
+				<img src="MENU LOGO.png" alt="ENNEJI COOKIES">
+		</div>
+		
+		<div>
+			<b>ENNEJI COOKIES</b>
+			<a href="HOME PAGE.html"><b>Home</b></a>
+			<a href="ORDER FORM.html"><b>Order Here</b></a>
+		</div>
+	</div>
+
+	<div class="content">
+			<div class="cookie-grid">
+				<div class="cookie-container">
+					<img src="Cappuccino.png" alt="Cappuccino">
+					<div class="cookie-name"><h3>CAPPUCCINO COOKIE</h3></div>
+				</div>
+				<div class="cookie-container">
+					<img src="Ginger.png" alt="Ginger">
+					<div class="cookie-name"><h3>GINGER COOKIE</h3></div>
+				</div>
+				<div class="cookie-container">
+					<img src="Lemon-Crinkle.png" alt="Lemon-Crinkle">
+					<div class="cookie-name"><h3>LEMON CRINKLE COOKIE</h3></div>
+				</div>
+				<div class="cookie-container">
+					<img src="Oreo.png" alt="Oreo">
+					<div class="cookie-name"><h3>OREO COOKIE</h3></div>
+				</div>
+				<div class="cookie-container">			
+					<img src="Peanut-Butter-Jelly.png" alt="Peanut Butter Jelly">
+					<div class="cookie-name"><h3>PEANUT BUTTER & JELLY COOKIE</h3></div>
+				</div>
+				<div class="cookie-container">
+					<img src="Triple-Choc.png" alt="Triple Choc">
+					<div class="cookie-name"><h3>TRIPLE CHOCOLATE COOKIE</h3></div>
+				</div>
+			</div>
+				<center><a href="ORDER FORM.html">Order Now</a></center>
+	</div>
+</body>
+
+</html>
